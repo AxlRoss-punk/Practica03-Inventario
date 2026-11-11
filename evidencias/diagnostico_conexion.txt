@@ -1,0 +1,86 @@
+test_duplicado (pruebas.test_aceptacion.ExcepcionesUsuario.test_duplicado) ... ok
+test_incompleto (pruebas.test_aceptacion.ExcepcionesUsuario.test_incompleto) ... ok
+test_inexistente (pruebas.test_aceptacion.ExcepcionesUsuario.test_inexistente) ... ok
+test_no_disponible (pruebas.test_aceptacion.ExcepcionesUsuario.test_no_disponible) ... ok
+test_agotar (pruebas.test_aceptacion.ProcesoCompleto.test_agotar) ... ok
+test_flujo_completo (pruebas.test_aceptacion.ProcesoCompleto.test_flujo_completo) ... ok
+test_campos (pruebas.test_aceptacion.RegistroUsuario.test_campos) ... ok
+test_corregir (pruebas.test_aceptacion.RegistroUsuario.test_corregir) ... ok
+test_registrar_consultar (pruebas.test_aceptacion.RegistroUsuario.test_registrar_consultar) ... ok
+test_regla_negativo (pruebas.test_aceptacion.RegistroUsuario.test_regla_negativo) ... ok
+test_ca01_campos (pruebas.test_aceptacion.ValidacionFinalSimulada.test_ca01_campos) ... ok
+test_ca02_obligatorios (pruebas.test_aceptacion.ValidacionFinalSimulada.test_ca02_obligatorios) ... ok
+test_ca03_descuento_maximo (pruebas.test_aceptacion.ValidacionFinalSimulada.test_ca03_descuento_maximo) ... ok
+test_ca04_descuento_invalido (pruebas.test_aceptacion.ValidacionFinalSimulada.test_ca04_descuento_invalido) ... ok
+test_ca05_consistencia (pruebas.test_aceptacion.ValidacionFinalSimulada.test_ca05_consistencia) ... ok
+test_ca06_stock (pruebas.test_aceptacion.ValidacionFinalSimulada.test_ca06_stock) ... ok
+test_ca07_recuperacion (pruebas.test_aceptacion.ValidacionFinalSimulada.test_ca07_recuperacion) ... ok
+test_cantidad_invalida (pruebas.test_integracion.FormularioPersistencia.test_cantidad_invalida) ... ok
+test_duplicado (pruebas.test_integracion.FormularioPersistencia.test_duplicado) ... ok
+test_obligatorio (pruebas.test_integracion.FormularioPersistencia.test_obligatorio) ... ok
+test_reabrir (pruebas.test_integracion.FormularioPersistencia.test_reabrir) ... ok
+test_registro_valido (pruebas.test_integracion.FormularioPersistencia.test_registro_valido) ... ERROR
+test_bloqueo (pruebas.test_integracion.ServicioBaseDatos.test_bloqueo) ... ok
+test_recuperacion (pruebas.test_integracion.ServicioBaseDatos.test_recuperacion) ... ok
+test_respuesta_correcta (pruebas.test_integracion.ServicioBaseDatos.test_respuesta_correcta) ... ok
+test_concurrencia (pruebas.test_integracion.VentasInventario.test_concurrencia) ... ok
+test_rollback_real (pruebas.test_integracion.VentasInventario.test_rollback_real) ... ok
+test_sin_stock (pruebas.test_integracion.VentasInventario.test_sin_stock) ... ok
+test_stock_exacto (pruebas.test_integracion.VentasInventario.test_stock_exacto) ... ok
+test_venta_actualiza (pruebas.test_integracion.VentasInventario.test_venta_actualiza) ... ok
+test_cero (pruebas.test_unitarias.RestriccionDescuento.test_cero) ... ok
+test_excesivo (pruebas.test_unitarias.RestriccionDescuento.test_excesivo) ... ok
+test_formato (pruebas.test_unitarias.RestriccionDescuento.test_formato) ... ok
+test_limite (pruebas.test_unitarias.RestriccionDescuento.test_limite) ... ok
+test_negativo (pruebas.test_unitarias.RestriccionDescuento.test_negativo) ... ok
+test_normal (pruebas.test_unitarias.RestriccionDescuento.test_normal) ... ok
+test_precision (pruebas.test_unitarias.RestriccionDescuento.test_precision) ... ok
+test_redondeo (pruebas.test_unitarias.RestriccionDescuento.test_redondeo) ... ok
+test_ausente (pruebas.test_unitarias.ValidacionCantidad.test_ausente) ... ok
+test_cero (pruebas.test_unitarias.ValidacionCantidad.test_cero) ... ok
+test_formato (pruebas.test_unitarias.ValidacionCantidad.test_formato) ... ok
+test_fraccion (pruebas.test_unitarias.ValidacionCantidad.test_fraccion) ... ok
+test_fuera_rango (pruebas.test_unitarias.ValidacionCantidad.test_fuera_rango) ... ok
+test_maximo (pruebas.test_unitarias.ValidacionCantidad.test_maximo) ... ok
+test_negativa (pruebas.test_unitarias.ValidacionCantidad.test_negativa) ... ok
+test_vacia (pruebas.test_unitarias.ValidacionCantidad.test_vacia) ... ok
+test_valida (pruebas.test_unitarias.ValidacionCantidad.test_valida) ... ok
+test_centavos (pruebas.test_unitarias.ValorStock.test_centavos) ... ok
+test_cero (pruebas.test_unitarias.ValorStock.test_cero) ... ok
+test_limite (pruebas.test_unitarias.ValorStock.test_limite) ... ok
+test_normal (pruebas.test_unitarias.ValorStock.test_normal) ... ok
+test_precio_cero (pruebas.test_unitarias.ValorStock.test_precio_cero) ... ok
+
+======================================================================
+ERROR: test_registro_valido (pruebas.test_integracion.FormularioPersistencia.test_registro_valido)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\dante\AppData\Local\Python\pythoncore-3.14-64\Lib\shutil.py", line 701, in _rmtree_unsafe
+    os.unlink(fullname)
+    ~~~~~~~~~^^^^^^^^^^
+PermissionError: [WinError 32] El proceso no tiene acceso al archivo porque está siendo utilizado por otro proceso: 'C:\\Users\\dante\\AppData\\Local\\Temp\\practica3_ps6vb1ja\\pruebas.sqlite3'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\dante\AppData\Local\Python\pythoncore-3.14-64\Lib\tempfile.py", line 976, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dante\AppData\Local\Python\pythoncore-3.14-64\Lib\tempfile.py", line 956, in _rmtree
+    _shutil.rmtree(name, onexc=onexc)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dante\AppData\Local\Python\pythoncore-3.14-64\Lib\shutil.py", line 852, in rmtree
+    _rmtree_impl(path, dir_fd, onexc)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dante\AppData\Local\Python\pythoncore-3.14-64\Lib\shutil.py", line 705, in _rmtree_unsafe
+    onexc(os.unlink, fullname, err)
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dante\AppData\Local\Python\pythoncore-3.14-64\Lib\tempfile.py", line 931, in onexc
+    _os.unlink(path)
+    ~~~~~~~~~~^^^^^^
+PermissionError: [WinError 32] El proceso no tiene acceso al archivo porque está siendo utilizado por otro proceso: 'C:\\Users\\dante\\AppData\\Local\\Temp\\practica3_ps6vb1ja\\pruebas.sqlite3'
+
+----------------------------------------------------------------------
+Ran 52 tests in 5.063s
+
+FAILED (errors=1)

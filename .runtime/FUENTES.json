@@ -1,0 +1,14 @@
+[
+  {
+    "componente": "tcl",
+    "version": "9.0.4",
+    "url": "https://github.com/tcltk/tcl/archive/refs/tags/core-9-0-4.zip",
+    "sha256": "e6a6d861b3fd75dd00c2c71b5b0f859022fa9b59207819a2417d93b9ab634f46"
+  },
+  {
+    "componente": "tk",
+    "version": "9.0.4",
+    "url": "https://github.com/tcltk/tk/archive/refs/tags/core-9-0-4.zip",
+    "sha256": "e41bcf9d9ba318ac2975dffcd1ae4f89061f61649c7ed3bf4f5c362e5e6c24f0"
+  }
+]

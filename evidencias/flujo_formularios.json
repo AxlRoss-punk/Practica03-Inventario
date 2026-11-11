@@ -1,0 +1,111 @@
+{
+  "fecha": "2026-11-11T17:19:28-04:00",
+  "modalidad": "SIMULADA",
+  "pasos": [
+    {
+      "paso": "01_formulario",
+      "entrada": {},
+      "mensaje": "Los campos con * son obligatorios. Los importes se expresan en unidades monetarias.",
+      "productos": [],
+      "ventas": []
+    },
+    {
+      "paso": "02_producto_guardado",
+      "entrada": {
+        "codigo": "LAP-01",
+        "nombre": "Lápiz HB",
+        "cantidad": "10",
+        "precio": "2.50"
+      },
+      "mensaje": "Producto LAP-01 registrado correctamente.",
+      "productos": [
+        {
+          "codigo": "LAP-01",
+          "nombre": "Lápiz HB",
+          "cantidad": 10,
+          "precio_centavos": 250
+        }
+      ],
+      "ventas": []
+    },
+    {
+      "paso": "03_venta_realizada",
+      "entrada": {
+        "codigo": "LAP-01",
+        "cantidad": "3",
+        "descuento": "10"
+      },
+      "mensaje": "Venta 1 registrada correctamente. Total: 6.75.",
+      "productos": [
+        {
+          "codigo": "LAP-01",
+          "nombre": "Lápiz HB",
+          "cantidad": 7,
+          "precio_centavos": 250
+        }
+      ],
+      "ventas": [
+        {
+          "id": 1,
+          "codigo": "LAP-01",
+          "cantidad": 3,
+          "descuento": "10",
+          "total_centavos": 675,
+          "fecha": "2026-11-11T21:19:27.917Z"
+        }
+      ]
+    },
+    {
+      "paso": "04_stock_insuficiente",
+      "entrada": {
+        "codigo": "LAP-01",
+        "cantidad": "8",
+        "descuento": "10"
+      },
+      "mensaje": "No hay existencias suficientes para realizar la venta.",
+      "productos": [
+        {
+          "codigo": "LAP-01",
+          "nombre": "Lápiz HB",
+          "cantidad": 7,
+          "precio_centavos": 250
+        }
+      ],
+      "ventas": [
+        {
+          "id": 1,
+          "codigo": "LAP-01",
+          "cantidad": 3,
+          "descuento": "10",
+          "total_centavos": 675,
+          "fecha": "2026-11-11T21:19:27.917Z"
+        }
+      ]
+    },
+    {
+      "paso": "05_codigo_duplicado",
+      "entrada": {
+        "codigo": "LAP-01"
+      },
+      "mensaje": "Ya existe un producto con ese código.",
+      "productos": [
+        {
+          "codigo": "LAP-01",
+          "nombre": "Lápiz HB",
+          "cantidad": 7,
+          "precio_centavos": 250
+        }
+      ],
+      "ventas": [
+        {
+          "id": 1,
+          "codigo": "LAP-01",
+          "cantidad": 3,
+          "descuento": "10",
+          "total_centavos": 675,
+          "fecha": "2026-11-11T21:19:27.917Z"
+        }
+      ]
+    }
+  ]
+}

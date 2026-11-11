@@ -1,0 +1,2102 @@
+{
+  "fecha": "2026-11-11T17:24:34-04:00",
+  "zona_horaria": "America/Caracas",
+  "python": "3.14.7",
+  "sqlite": "3.50.4",
+  "sistema": "Windows-11-10.0.26300-SP0",
+  "ejecutable": "C:\\Users\\dante\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+  "aceptacion": "SIMULADA: automatización de los formularios Tkinter; sin usuario independiente",
+  "total": 52,
+  "aprobadas": 52,
+  "fallidas": 0,
+  "errores": 0,
+  "omitidas": 0,
+  "casos": [
+    {
+      "id": "E01-01",
+      "descripcion": "Cantidad válida",
+      "entrada": "10",
+      "esperado": 10,
+      "obtenido": 10,
+      "estado": "CUMPLE",
+      "duracion_segundos": 0.0,
+      "prueba": "pruebas.test_unitarias.ValidacionCantidad.test_valida",
+      "detalle_error": "",
+      "evidencias": []
+    },
+    {
+      "id": "E01-02",
+      "descripcion": "Cantidad vacía",
+      "entrada": "cadena vacía",
+      "esperado": "La cantidad es obligatoria.",
+      "obtenido": "La cantidad es obligatoria.",
+      "estado": "CUMPLE",
+      "duracion_segundos": 0.0,
+      "prueba": "pruebas.test_unitarias.ValidacionCantidad.test_vacia",
+      "detalle_error": "",
+      "evidencias": []
+    },
+    {
+      "id": "E01-03",
+      "descripcion": "Cantidad negativa",
+      "entrada": "-1",
+      "esperado": "La cantidad no puede ser negativa.",
+      "obtenido": "La cantidad no puede ser negativa.",
+      "estado": "CUMPLE",
+      "duracion_segundos": 0.0,
+      "prueba": "pruebas.test_unitarias.ValidacionCantidad.test_negativa",
+      "detalle_error": "",
+      "evidencias": []
+    },
+    {
+      "id": "E01-04",
+      "descripcion": "Cantidad fuera de rango",
+      "entrada": "1000000",
+      "esperado": "La cantidad no puede superar 999999.",
+      "obtenido": "La cantidad no puede superar 999999.",
+      "estado": "CUMPLE",
+      "duracion_segundos": 0.0,
+      "prueba": "pruebas.test_unitarias.ValidacionCantidad.test_fuera_rango",
+      "detalle_error": "",
+      "evidencias": []
+    },
+    {
+      "id": "E01-05",
+      "descripcion": "Formato incorrecto",
+      "entrada": "abc",
+      "esperado": "La cantidad debe ser un número entero.",
+      "obtenido": "La cantidad debe ser un número entero.",
+      "estado": "CUMPLE",
+      "duracion_segundos": 0.0,
+      "prueba": "pruebas.test_unitarias.ValidacionCantidad.test_formato",
+      "detalle_error": "",
+      "evidencias": []
+    },
+    {
+      "id": "E01-06",
+      "descripcion": "Límite inferior permitido",
+      "entrada": "0",
+      "esperado": 0,
+      "obtenido": 0,
+      "estado": "CUMPLE",
+      "duracion_segundos": 0.0,
+      "prueba": "pruebas.test_unitarias.ValidacionCantidad.test_cero",
+      "detalle_error": "",
+      "evidencias": []
+    },
+    {
+      "id": "E01-07",
+      "descripcion": "Límite superior permitido",
+      "entrada": "999999",
+      "esperado": 999999,
+      "obtenido": 999999,
+      "estado": "CUMPLE",
+      "duracion_segundos": 0.0,
+      "prueba": "pruebas.test_unitarias.ValidacionCantidad.test_maximo",
+      "detalle_error": "",
+      "evidencias": []
+    },
+    {
+      "id": "E01-08",
+      "descripcion": "Una cantidad fraccionaria no es stock entero",
+      "entrada": "1.5",
+      "esperado": "La cantidad debe ser un número entero.",
+      "obtenido": "La cantidad debe ser un número entero.",
+      "estado": "CUMPLE",
+      "duracion_segundos": 0.0,
+      "prueba": "pruebas.test_unitarias.ValidacionCantidad.test_fraccion",
+      "detalle_error": "",
+      "evidencias": []
+    },
+    {
+      "id": "E01-09",
+      "descripcion": "Ausencia de dato",
+      "entrada": "None",
+      "esperado": "La cantidad es obligatoria.",
+      "obtenido": "La cantidad es obligatoria.",
+      "estado": "CUMPLE",
+      "duracion_segundos": 0.0,
+      "prueba": "pruebas.test_unitarias.ValidacionCantidad.test_ausente",
+      "detalle_error": "",
+      "evidencias": []
+    },
+    {
+      "id": "E02-01",
+      "descripcion": "Valor normal",
+      "entrada": "10 × 2.50 = 25.00",
+      "esperado": "25.00",
+      "obtenido": "25.00",
+      "estado": "CUMPLE",
+      "duracion_segundos": 0.0,
+      "prueba": "pruebas.test_unitarias.ValorStock.test_normal",
+      "detalle_error": "",
+      "evidencias": []
+    },
+    {
+      "id": "E02-02",
+      "descripcion": "Stock cero",
+      "entrada": "0 × 2.50 = 0.00",
+      "esperado": "0.00",
+      "obtenido": "0.00",
+      "estado": "CUMPLE",
+      "duracion_segundos": 0.0,
+      "prueba": "pruebas.test_unitarias.ValorStock.test_cero",
+      "detalle_error": "",
+      "evidencias": []
+    },
+    {
+      "id": "E02-03",
+      "descripcion": "Precio cero",
+      "entrada": "7 × 0.00 = 0.00",
+      "esperado": "0.00",
+      "obtenido": "0.00",
+      "estado": "CUMPLE",
+      "duracion_segundos": 0.0001,
+      "prueba": "pruebas.test_unitarias.ValorStock.test_precio_cero",
+      "detalle_error": "",
+      "evidencias": []
+    },
+    {
+      "id": "E02-04",
+      "descripcion": "Importes con centavos",
+      "entrada": "3 × 19.99 = 59.97",
+      "esperado": "59.97",
+      "obtenido": "59.97",
+      "estado": "CUMPLE",
+      "duracion_segundos": 0.0,
+      "prueba": "pruebas.test_unitarias.ValorStock.test_centavos",
+      "detalle_error": "",
+      "evidencias": []
+    },
+    {
+      "id": "E02-05",
+      "descripcion": "Límite de cantidad y precio",
+      "entrada": "999999 × 999999.99 = 999998990000.01",
+      "esperado": "999998990000.01",
+      "obtenido": "999998990000.01",
+      "estado": "CUMPLE",
+      "duracion_segundos": 0.0,
+      "prueba": "pruebas.test_unitarias.ValorStock.test_limite",
+      "detalle_error": "",
+      "evidencias": []
+    },
+    {
+      "id": "E03-01",
+      "descripcion": "Sin descuento",
+      "entrada": "0 %",
+      "esperado": "0",
+      "obtenido": "0",
+      "estado": "CUMPLE",
+      "duracion_segundos": 0.0001,
+      "prueba": "pruebas.test_unitarias.RestriccionDescuento.test_cero",
+      "detalle_error": "",
+      "evidencias": []
+    },
+    {
+      "id": "E03-02",
+      "descripcion": "Descuento normal",
+      "entrada": "10 %",
+      "esperado": "10",
+      "obtenido": "10",
+      "estado": "CUMPLE",
+      "duracion_segundos": 0.0,
+      "prueba": "pruebas.test_unitarias.RestriccionDescuento.test_normal",
+      "detalle_error": "",
+      "evidencias": []
+    },
+    {
+      "id": "E03-03",
+      "descripcion": "Límite superior inclusivo",
+      "entrada": "20 %",
+      "esperado": "20",
+      "obtenido": "20",
+      "estado": "CUMPLE",
+      "duracion_segundos": 0.0,
+      "prueba": "pruebas.test_unitarias.RestriccionDescuento.test_limite",
+      "detalle_error": "",
+      "evidencias": []
+    },
+    {
+      "id": "E03-04",
+      "descripcion": "Descuento negativo",
+      "entrada": "-0.01 %",
+      "esperado": "El descuento no puede ser negativo.",
+      "obtenido": "El descuento no puede ser negativo.",
+      "estado": "CUMPLE",
+      "duracion_segundos": 0.0,
+      "prueba": "pruebas.test_unitarias.RestriccionDescuento.test_negativo",
+      "detalle_error": "",
+      "evidencias": []
+    },
+    {
+      "id": "E03-05",
+      "descripcion": "Supera el descuento permitido",
+      "entrada": "20.01 %",
+      "esperado": "El descuento no puede superar 20.",
+      "obtenido": "El descuento no puede superar 20.",
+      "estado": "CUMPLE",
+      "duracion_segundos": 0.0001,
+      "prueba": "pruebas.test_unitarias.RestriccionDescuento.test_excesivo",
+      "detalle_error": "",
+      "evidencias": []
+    },
+    {
+      "id": "E03-06",
+      "descripcion": "Descuento no numérico",
+      "entrada": "diez",
+      "esperado": "El descuento debe ser un número con hasta 2 decimales.",
+      "obtenido": "El descuento debe ser un número con hasta 2 decimales.",
+      "estado": "CUMPLE",
+      "duracion_segundos": 0.0,
+      "prueba": "pruebas.test_unitarias.RestriccionDescuento.test_formato",
+      "detalle_error": "",
+      "evidencias": []
+    },
+    {
+      "id": "E03-07",
+      "descripcion": "Precisión no permitida",
+      "entrada": "1.001 %",
+      "esperado": "El descuento admite hasta 2 decimales.",
+      "obtenido": "El descuento admite hasta 2 decimales.",
+      "estado": "CUMPLE",
+      "duracion_segundos": 0.0,
+      "prueba": "pruebas.test_unitarias.RestriccionDescuento.test_precision",
+      "detalle_error": "",
+      "evidencias": []
+    },
+    {
+      "id": "E03-08",
+      "descripcion": "Redondeo comercial de una venta",
+      "entrada": "1 × 0.05 × (1 − 10/100) = 0.045 → 0.05",
+      "esperado": "0.05",
+      "obtenido": "0.05",
+      "estado": "CUMPLE",
+      "duracion_segundos": 0.0001,
+      "prueba": "pruebas.test_unitarias.RestriccionDescuento.test_redondeo",
+      "detalle_error": "",
+      "evidencias": []
+    },
+    {
+      "id": "E04-01",
+      "descripcion": "Formulario válido persiste los datos exactos",
+      "entrada": "LAP-01, Lápiz HB, 10, 2.50",
+      "esperado": [
+        "LAP-01",
+        "Lápiz HB",
+        10,
+        250
+      ],
+      "obtenido": [
+        "LAP-01",
+        "Lápiz HB",
+        10,
+        250
+      ],
+      "estado": "CUMPLE",
+      "duracion_segundos": 0.0901,
+      "prueba": "pruebas.test_integracion.FormularioPersistencia.test_registro_valido",
+      "detalle_error": "",
+      "evidencias": [
+        {
+          "accion": "Registro de producto",
+          "entrada_formulario": {
+            "codigo": "LAP-01",
+            "nombre": "Lápiz HB",
+            "cantidad": "10",
+            "precio": "2.50"
+          },
+          "mensaje_visible": "Producto LAP-01 registrado correctamente.",
+          "tabla_productos": [
+            [
+              "LAP-01",
+              "Lápiz HB",
+              "10",
+              "2.50",
+              "25.00"
+            ]
+          ],
+          "tabla_ventas": [],
+          "base_datos": {
+            "productos": [
+              {
+                "codigo": "LAP-01",
+                "nombre": "Lápiz HB",
+                "cantidad": 10,
+                "precio_centavos": 250
+              }
+            ],
+            "ventas": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "E04-02",
+      "descripcion": "Campo obligatorio ausente no inserta",
+      "entrada": "nombre vacío",
+      "esperado": [
+        "El nombre es obligatorio y debe tener entre 2 y 80 caracteres.",
+        []
+      ],
+      "obtenido": [
+        "El nombre es obligatorio y debe tener entre 2 y 80 caracteres.",
+        []
+      ],
+      "estado": "CUMPLE",
+      "duracion_segundos": 0.084,
+      "prueba": "pruebas.test_integracion.FormularioPersistencia.test_obligatorio",
+      "detalle_error": "",
+      "evidencias": [
+        {
+          "accion": "Registro de producto",
+          "entrada_formulario": {
+            "codigo": "LAP-01",
+            "nombre": "",
+            "cantidad": "10",
+            "precio": "2.50"
+          },
+          "mensaje_visible": "El nombre es obligatorio y debe tener entre 2 y 80 caracteres.",
+          "tabla_productos": [],
+          "tabla_ventas": [],
+          "base_datos": {
+            "productos": [],
+            "ventas": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "E04-03",
+      "descripcion": "Código duplicado no sobrescribe el registro",
+      "entrada": "LAP-01 y lap-01",
+      "esperado": [
+        "Ya existe un producto con ese código.",
+        {
+          "productos": [
+            {
+              "codigo": "LAP-01",
+              "nombre": "Lápiz HB",
+              "cantidad": 10,
+              "precio_centavos": 250
+            }
+          ],
+          "ventas": []
+        }
+      ],
+      "obtenido": [
+        "Ya existe un producto con ese código.",
+        {
+          "productos": [
+            {
+              "codigo": "LAP-01",
+              "nombre": "Lápiz HB",
+              "cantidad": 10,
+              "precio_centavos": 250
+            }
+          ],
+          "ventas": []
+        }
+      ],
+      "estado": "CUMPLE",
+      "duracion_segundos": 0.1275,
+      "prueba": "pruebas.test_integracion.FormularioPersistencia.test_duplicado",
+      "detalle_error": "",
+      "evidencias": [
+        {
+          "accion": "Registro de producto",
+          "entrada_formulario": {
+            "codigo": "LAP-01",
+            "nombre": "Lápiz HB",
+            "cantidad": "10",
+            "precio": "2.50"
+          },
+          "mensaje_visible": "Producto LAP-01 registrado correctamente.",
+          "tabla_productos": [
+            [
+              "LAP-01",
+              "Lápiz HB",
+              "10",
+              "2.50",
+              "25.00"
+            ]
+          ],
+          "tabla_ventas": [],
+          "base_datos": {
+            "productos": [
+              {
+                "codigo": "LAP-01",
+                "nombre": "Lápiz HB",
+                "cantidad": 10,
+                "precio_centavos": 250
+              }
+            ],
+            "ventas": []
+          }
+        },
+        {
+          "accion": "Registro de producto",
+          "entrada_formulario": {
+            "codigo": "lap-01",
+            "nombre": "Otro nombre",
+            "cantidad": "5",
+            "precio": "2.50"
+          },
+          "mensaje_visible": "Ya existe un producto con ese código.",
+          "tabla_productos": [
+            [
+              "LAP-01",
+              "Lápiz HB",
+              "10",
+              "2.50",
+              "25.00"
+            ]
+          ],
+          "tabla_ventas": [],
+          "base_datos": {
+            "productos": [
+              {
+                "codigo": "LAP-01",
+                "nombre": "Lápiz HB",
+                "cantidad": 10,
+                "precio_centavos": 250
+              }
+            ],
+            "ventas": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "E04-04",
+      "descripcion": "Validación de cantidad se ejecuta desde el formulario",
+      "entrada": "cantidad -1",
+      "esperado": [
+        "La cantidad no puede ser negativa.",
+        []
+      ],
+      "obtenido": [
+        "La cantidad no puede ser negativa.",
+        []
+      ],
+      "estado": "CUMPLE",
+      "duracion_segundos": 0.1285,
+      "prueba": "pruebas.test_integracion.FormularioPersistencia.test_cantidad_invalida",
+      "detalle_error": "",
+      "evidencias": [
+        {
+          "accion": "Registro de producto",
+          "entrada_formulario": {
+            "codigo": "LAP-01",
+            "nombre": "Lápiz HB",
+            "cantidad": "-1",
+            "precio": "2.50"
+          },
+          "mensaje_visible": "La cantidad no puede ser negativa.",
+          "tabla_productos": [],
+          "tabla_ventas": [],
+          "base_datos": {
+            "productos": [],
+            "ventas": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "E04-05",
+      "descripcion": "Persistencia al abrir otra conexión",
+      "entrada": "guardar y crear otra instancia del servicio",
+      "esperado": [
+        [
+          "LAP-01",
+          10,
+          250
+        ]
+      ],
+      "obtenido": [
+        [
+          "LAP-01",
+          10,
+          250
+        ]
+      ],
+      "estado": "CUMPLE",
+      "duracion_segundos": 0.0896,
+      "prueba": "pruebas.test_integracion.FormularioPersistencia.test_reabrir",
+      "detalle_error": "",
+      "evidencias": [
+        {
+          "accion": "Registro de producto",
+          "entrada_formulario": {
+            "codigo": "LAP-01",
+            "nombre": "Lápiz HB",
+            "cantidad": "10",
+            "precio": "2.50"
+          },
+          "mensaje_visible": "Producto LAP-01 registrado correctamente.",
+          "tabla_productos": [
+            [
+              "LAP-01",
+              "Lápiz HB",
+              "10",
+              "2.50",
+              "25.00"
+            ]
+          ],
+          "tabla_ventas": [],
+          "base_datos": {
+            "productos": [
+              {
+                "codigo": "LAP-01",
+                "nombre": "Lápiz HB",
+                "cantidad": 10,
+                "precio_centavos": 250
+              }
+            ],
+            "ventas": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "E05-01",
+      "descripcion": "Una venta actualiza stock y genera historial",
+      "entrada": "stock 10; venta 3; precio 2.50; descuento 10 %",
+      "esperado": [
+        7,
+        1,
+        675
+      ],
+      "obtenido": [
+        7,
+        1,
+        675
+      ],
+      "estado": "CUMPLE",
+      "duracion_segundos": 0.026,
+      "prueba": "pruebas.test_integracion.VentasInventario.test_venta_actualiza",
+      "detalle_error": "",
+      "evidencias": []
+    },
+    {
+      "id": "E05-02",
+      "descripcion": "Falta de stock no modifica ninguno de los módulos",
+      "entrada": "stock 10; venta 11",
+      "esperado": "No hay existencias suficientes para realizar la venta.",
+      "obtenido": "No hay existencias suficientes para realizar la venta.",
+      "estado": "CUMPLE",
+      "duracion_segundos": 0.0184,
+      "prueba": "pruebas.test_integracion.VentasInventario.test_sin_stock",
+      "detalle_error": "",
+      "evidencias": []
+    },
+    {
+      "id": "E05-03",
+      "descripcion": "Venta exacta del stock deja cero",
+      "entrada": "stock 10; venta 10",
+      "esperado": [
+        0,
+        1
+      ],
+      "obtenido": [
+        0,
+        1
+      ],
+      "estado": "CUMPLE",
+      "duracion_segundos": 0.0222,
+      "prueba": "pruebas.test_integracion.VentasInventario.test_stock_exacto",
+      "detalle_error": "",
+      "evidencias": []
+    },
+    {
+      "id": "E05-04",
+      "descripcion": "Un fallo al insertar la venta revierte la reducción de stock",
+      "entrada": "trigger de prueba RAISE(ABORT) en ventas",
+      "esperado": "No se pudo acceder a la base de datos. Intenta de nuevo.",
+      "obtenido": "No se pudo acceder a la base de datos. Intenta de nuevo.",
+      "estado": "CUMPLE",
+      "duracion_segundos": 0.034,
+      "prueba": "pruebas.test_integracion.VentasInventario.test_rollback_real",
+      "detalle_error": "",
+      "evidencias": []
+    },
+    {
+      "id": "E05-05",
+      "descripcion": "Ventas simultáneas no producen sobreventa",
+      "entrada": "stock 10; dos ventas concurrentes de 7",
+      "esperado": [
+        [
+          "rechazada",
+          "registrada"
+        ],
+        3,
+        1
+      ],
+      "obtenido": [
+        [
+          "rechazada",
+          "registrada"
+        ],
+        3,
+        1
+      ],
+      "estado": "CUMPLE",
+      "duracion_segundos": 0.0416,
+      "prueba": "pruebas.test_integracion.VentasInventario.test_concurrencia",
+      "detalle_error": "",
+      "evidencias": []
+    },
+    {
+      "id": "E06-01",
+      "descripcion": "Integración correcta de lógica y SQLite",
+      "entrada": "registrar y consultar LAP-01",
+      "esperado": "LAP-01",
+      "obtenido": "LAP-01",
+      "estado": "CUMPLE",
+      "duracion_segundos": 0.0235,
+      "prueba": "pruebas.test_integracion.ServicioBaseDatos.test_respuesta_correcta",
+      "detalle_error": "",
+      "evidencias": []
+    },
+    {
+      "id": "E06-02",
+      "descripcion": "Base de datos bloqueada devuelve un error controlado",
+      "entrada": "BEGIN EXCLUSIVE en otra conexión; timeout 0.15 s",
+      "esperado": "No se pudo acceder a la base de datos. Intenta de nuevo.",
+      "obtenido": "No se pudo acceder a la base de datos. Intenta de nuevo.",
+      "estado": "CUMPLE",
+      "duracion_segundos": 0.6426,
+      "prueba": "pruebas.test_integracion.ServicioBaseDatos.test_bloqueo",
+      "detalle_error": "",
+      "evidencias": []
+    },
+    {
+      "id": "E06-03",
+      "descripcion": "El servicio se recupera después del bloqueo",
+      "entrada": "fallo con bloqueo; liberar conexión; repetir venta",
+      "esperado": [
+        8,
+        1
+      ],
+      "obtenido": [
+        8,
+        1
+      ],
+      "estado": "CUMPLE",
+      "duracion_segundos": 0.6989,
+      "prueba": "pruebas.test_integracion.ServicioBaseDatos.test_recuperacion",
+      "detalle_error": "",
+      "evidencias": []
+    },
+    {
+      "id": "E07-01",
+      "descripcion": "El usuario encuentra los campos y acciones de registro",
+      "entrada": "abrir aplicación",
+      "esperado": [
+        [
+          "codigo",
+          "nombre",
+          "cantidad",
+          "precio"
+        ],
+        "Guardar producto"
+      ],
+      "obtenido": [
+        [
+          "codigo",
+          "nombre",
+          "cantidad",
+          "precio"
+        ],
+        "Guardar producto"
+      ],
+      "estado": "CUMPLE",
+      "duracion_segundos": 0.0792,
+      "prueba": "pruebas.test_aceptacion.RegistroUsuario.test_campos",
+      "detalle_error": "",
+      "evidencias": []
+    },
+    {
+      "id": "E07-02",
+      "descripcion": "El usuario registra y consulta el producto",
+      "entrada": "LAP-01, Lápiz HB, 10, 2.50",
+      "esperado": [
+        "Producto LAP-01 registrado correctamente.",
+        [
+          [
+            "LAP-01",
+            "Lápiz HB",
+            "10",
+            "2.50",
+            "25.00"
+          ]
+        ]
+      ],
+      "obtenido": [
+        "Producto LAP-01 registrado correctamente.",
+        [
+          [
+            "LAP-01",
+            "Lápiz HB",
+            "10",
+            "2.50",
+            "25.00"
+          ]
+        ]
+      ],
+      "estado": "CUMPLE",
+      "duracion_segundos": 0.1014,
+      "prueba": "pruebas.test_aceptacion.RegistroUsuario.test_registrar_consultar",
+      "detalle_error": "",
+      "evidencias": [
+        {
+          "accion": "Registro de producto",
+          "entrada_formulario": {
+            "codigo": "LAP-01",
+            "nombre": "Lápiz HB",
+            "cantidad": "10",
+            "precio": "2.50"
+          },
+          "mensaje_visible": "Producto LAP-01 registrado correctamente.",
+          "tabla_productos": [
+            [
+              "LAP-01",
+              "Lápiz HB",
+              "10",
+              "2.50",
+              "25.00"
+            ]
+          ],
+          "tabla_ventas": [],
+          "base_datos": {
+            "productos": [
+              {
+                "codigo": "LAP-01",
+                "nombre": "Lápiz HB",
+                "cantidad": 10,
+                "precio_centavos": 250
+              }
+            ],
+            "ventas": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "E07-03",
+      "descripcion": "Mensaje comprensible y posibilidad de corregir un dato obligatorio",
+      "entrada": "nombre vacío; corregir a Lápiz HB",
+      "esperado": [
+        1,
+        "Producto LAP-01 registrado correctamente."
+      ],
+      "obtenido": [
+        1,
+        "Producto LAP-01 registrado correctamente."
+      ],
+      "estado": "CUMPLE",
+      "duracion_segundos": 0.0902,
+      "prueba": "pruebas.test_aceptacion.RegistroUsuario.test_corregir",
+      "detalle_error": "",
+      "evidencias": [
+        {
+          "accion": "Registro de producto",
+          "entrada_formulario": {
+            "codigo": "LAP-01",
+            "nombre": "",
+            "cantidad": "10",
+            "precio": "2.50"
+          },
+          "mensaje_visible": "El nombre es obligatorio y debe tener entre 2 y 80 caracteres.",
+          "tabla_productos": [],
+          "tabla_ventas": [],
+          "base_datos": {
+            "productos": [],
+            "ventas": []
+          }
+        },
+        {
+          "accion": "Registro de producto",
+          "entrada_formulario": {
+            "codigo": "LAP-01",
+            "nombre": "Lápiz HB",
+            "cantidad": "10",
+            "precio": "2.50"
+          },
+          "mensaje_visible": "Producto LAP-01 registrado correctamente.",
+          "tabla_productos": [
+            [
+              "LAP-01",
+              "Lápiz HB",
+              "10",
+              "2.50",
+              "25.00"
+            ]
+          ],
+          "tabla_ventas": [],
+          "base_datos": {
+            "productos": [
+              {
+                "codigo": "LAP-01",
+                "nombre": "Lápiz HB",
+                "cantidad": 10,
+                "precio_centavos": 250
+              }
+            ],
+            "ventas": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "E07-04",
+      "descripcion": "La interfaz impide registrar un precio negativo",
+      "entrada": "precio -2.50",
+      "esperado": [
+        "El precio no puede ser negativo.",
+        []
+      ],
+      "obtenido": [
+        "El precio no puede ser negativo.",
+        []
+      ],
+      "estado": "CUMPLE",
+      "duracion_segundos": 0.0838,
+      "prueba": "pruebas.test_aceptacion.RegistroUsuario.test_regla_negativo",
+      "detalle_error": "",
+      "evidencias": [
+        {
+          "accion": "Registro de producto",
+          "entrada_formulario": {
+            "codigo": "LAP-01",
+            "nombre": "Lápiz HB",
+            "cantidad": "10",
+            "precio": "-2.50"
+          },
+          "mensaje_visible": "El precio no puede ser negativo.",
+          "tabla_productos": [],
+          "tabla_ventas": [],
+          "base_datos": {
+            "productos": [],
+            "ventas": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "E08-01",
+      "descripcion": "Registrar producto, vender, consultar stock e historial",
+      "entrada": "10 unidades a 2.50; vender 3 con 10 %",
+      "esperado": [
+        "Venta 1 registrada correctamente. Total: 6.75.",
+        [
+          [
+            "LAP-01",
+            "Lápiz HB",
+            "7",
+            "2.50",
+            "17.50"
+          ]
+        ],
+        [
+          [
+            "1",
+            "LAP-01",
+            "3",
+            "10",
+            "6.75"
+          ]
+        ]
+      ],
+      "obtenido": [
+        "Venta 1 registrada correctamente. Total: 6.75.",
+        [
+          [
+            "LAP-01",
+            "Lápiz HB",
+            "7",
+            "2.50",
+            "17.50"
+          ]
+        ],
+        [
+          [
+            "1",
+            "LAP-01",
+            "3",
+            "10",
+            "6.75"
+          ]
+        ]
+      ],
+      "estado": "CUMPLE",
+      "duracion_segundos": 0.0952,
+      "prueba": "pruebas.test_aceptacion.ProcesoCompleto.test_flujo_completo",
+      "detalle_error": "",
+      "evidencias": [
+        {
+          "accion": "Registro de producto",
+          "entrada_formulario": {
+            "codigo": "LAP-01",
+            "nombre": "Lápiz HB",
+            "cantidad": "10",
+            "precio": "2.50"
+          },
+          "mensaje_visible": "Producto LAP-01 registrado correctamente.",
+          "tabla_productos": [
+            [
+              "LAP-01",
+              "Lápiz HB",
+              "10",
+              "2.50",
+              "25.00"
+            ]
+          ],
+          "tabla_ventas": [],
+          "base_datos": {
+            "productos": [
+              {
+                "codigo": "LAP-01",
+                "nombre": "Lápiz HB",
+                "cantidad": 10,
+                "precio_centavos": 250
+              }
+            ],
+            "ventas": []
+          }
+        },
+        {
+          "accion": "Registro de venta",
+          "entrada_formulario": {
+            "codigo": "LAP-01",
+            "cantidad": "3",
+            "descuento": "10"
+          },
+          "mensaje_visible": "Venta 1 registrada correctamente. Total: 6.75.",
+          "tabla_productos": [
+            [
+              "LAP-01",
+              "Lápiz HB",
+              "7",
+              "2.50",
+              "17.50"
+            ]
+          ],
+          "tabla_ventas": [
+            [
+              "1",
+              "LAP-01",
+              "3",
+              "10",
+              "6.75"
+            ]
+          ],
+          "base_datos": {
+            "productos": [
+              {
+                "codigo": "LAP-01",
+                "nombre": "Lápiz HB",
+                "cantidad": 7,
+                "precio_centavos": 250
+              }
+            ],
+            "ventas": [
+              {
+                "id": 1,
+                "codigo": "LAP-01",
+                "cantidad": 3,
+                "descuento": "10",
+                "total_centavos": 675,
+                "fecha": "2026-11-11T21:24:30.460Z"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "E08-02",
+      "descripcion": "Agotar existencias y comprobar rechazo de una segunda venta",
+      "entrada": "stock 2; vender 2; intentar vender 1",
+      "esperado": [
+        "No hay existencias suficientes para realizar la venta.",
+        "0",
+        1
+      ],
+      "obtenido": [
+        "No hay existencias suficientes para realizar la venta.",
+        "0",
+        1
+      ],
+      "estado": "CUMPLE",
+      "duracion_segundos": 0.1027,
+      "prueba": "pruebas.test_aceptacion.ProcesoCompleto.test_agotar",
+      "detalle_error": "",
+      "evidencias": [
+        {
+          "accion": "Registro de producto",
+          "entrada_formulario": {
+            "codigo": "LAP-01",
+            "nombre": "Lápiz HB",
+            "cantidad": "2",
+            "precio": "2.50"
+          },
+          "mensaje_visible": "Producto LAP-01 registrado correctamente.",
+          "tabla_productos": [
+            [
+              "LAP-01",
+              "Lápiz HB",
+              "2",
+              "2.50",
+              "5.00"
+            ]
+          ],
+          "tabla_ventas": [],
+          "base_datos": {
+            "productos": [
+              {
+                "codigo": "LAP-01",
+                "nombre": "Lápiz HB",
+                "cantidad": 2,
+                "precio_centavos": 250
+              }
+            ],
+            "ventas": []
+          }
+        },
+        {
+          "accion": "Registro de venta",
+          "entrada_formulario": {
+            "codigo": "LAP-01",
+            "cantidad": "2",
+            "descuento": "0"
+          },
+          "mensaje_visible": "Venta 1 registrada correctamente. Total: 5.00.",
+          "tabla_productos": [
+            [
+              "LAP-01",
+              "Lápiz HB",
+              "0",
+              "2.50",
+              "0.00"
+            ]
+          ],
+          "tabla_ventas": [
+            [
+              "1",
+              "LAP-01",
+              "2",
+              "0",
+              "5.00"
+            ]
+          ],
+          "base_datos": {
+            "productos": [
+              {
+                "codigo": "LAP-01",
+                "nombre": "Lápiz HB",
+                "cantidad": 0,
+                "precio_centavos": 250
+              }
+            ],
+            "ventas": [
+              {
+                "id": 1,
+                "codigo": "LAP-01",
+                "cantidad": 2,
+                "descuento": "0",
+                "total_centavos": 500,
+                "fecha": "2026-11-11T21:24:30.366Z"
+              }
+            ]
+          }
+        },
+        {
+          "accion": "Registro de venta",
+          "entrada_formulario": {
+            "codigo": "LAP-01",
+            "cantidad": "1",
+            "descuento": "0"
+          },
+          "mensaje_visible": "No hay existencias suficientes para realizar la venta.",
+          "tabla_productos": [
+            [
+              "LAP-01",
+              "Lápiz HB",
+              "0",
+              "2.50",
+              "0.00"
+            ]
+          ],
+          "tabla_ventas": [
+            [
+              "1",
+              "LAP-01",
+              "2",
+              "0",
+              "5.00"
+            ]
+          ],
+          "base_datos": {
+            "productos": [
+              {
+                "codigo": "LAP-01",
+                "nombre": "Lápiz HB",
+                "cantidad": 0,
+                "precio_centavos": 250
+              }
+            ],
+            "ventas": [
+              {
+                "id": 1,
+                "codigo": "LAP-01",
+                "cantidad": 2,
+                "descuento": "0",
+                "total_centavos": 500,
+                "fecha": "2026-11-11T21:24:30.366Z"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "E09-01",
+      "descripcion": "Duplicado: se explica el error y se conserva el original",
+      "entrada": "registrar LAP-01 dos veces",
+      "esperado": [
+        "Ya existe un producto con ese código.",
+        {
+          "productos": [
+            {
+              "codigo": "LAP-01",
+              "nombre": "Lápiz HB",
+              "cantidad": 10,
+              "precio_centavos": 250
+            }
+          ],
+          "ventas": []
+        }
+      ],
+      "obtenido": [
+        "Ya existe un producto con ese código.",
+        {
+          "productos": [
+            {
+              "codigo": "LAP-01",
+              "nombre": "Lápiz HB",
+              "cantidad": 10,
+              "precio_centavos": 250
+            }
+          ],
+          "ventas": []
+        }
+      ],
+      "estado": "CUMPLE",
+      "duracion_segundos": 0.2109,
+      "prueba": "pruebas.test_aceptacion.ExcepcionesUsuario.test_duplicado",
+      "detalle_error": "",
+      "evidencias": [
+        {
+          "accion": "Registro de producto",
+          "entrada_formulario": {
+            "codigo": "LAP-01",
+            "nombre": "Lápiz HB",
+            "cantidad": "10",
+            "precio": "2.50"
+          },
+          "mensaje_visible": "Producto LAP-01 registrado correctamente.",
+          "tabla_productos": [
+            [
+              "LAP-01",
+              "Lápiz HB",
+              "10",
+              "2.50",
+              "25.00"
+            ]
+          ],
+          "tabla_ventas": [],
+          "base_datos": {
+            "productos": [
+              {
+                "codigo": "LAP-01",
+                "nombre": "Lápiz HB",
+                "cantidad": 10,
+                "precio_centavos": 250
+              }
+            ],
+            "ventas": []
+          }
+        },
+        {
+          "accion": "Registro de producto",
+          "entrada_formulario": {
+            "codigo": "LAP-01",
+            "nombre": "Producto repetido",
+            "cantidad": "10",
+            "precio": "2.50"
+          },
+          "mensaje_visible": "Ya existe un producto con ese código.",
+          "tabla_productos": [
+            [
+              "LAP-01",
+              "Lápiz HB",
+              "10",
+              "2.50",
+              "25.00"
+            ]
+          ],
+          "tabla_ventas": [],
+          "base_datos": {
+            "productos": [
+              {
+                "codigo": "LAP-01",
+                "nombre": "Lápiz HB",
+                "cantidad": 10,
+                "precio_centavos": 250
+              }
+            ],
+            "ventas": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "E09-02",
+      "descripcion": "Información incompleta: no se guarda",
+      "entrada": "cantidad de producto vacía",
+      "esperado": [
+        "La cantidad es obligatoria.",
+        {
+          "productos": [],
+          "ventas": []
+        }
+      ],
+      "obtenido": [
+        "La cantidad es obligatoria.",
+        {
+          "productos": [],
+          "ventas": []
+        }
+      ],
+      "estado": "CUMPLE",
+      "duracion_segundos": 0.095,
+      "prueba": "pruebas.test_aceptacion.ExcepcionesUsuario.test_incompleto",
+      "detalle_error": "",
+      "evidencias": [
+        {
+          "accion": "Registro de producto",
+          "entrada_formulario": {
+            "codigo": "LAP-01",
+            "nombre": "Lápiz HB",
+            "cantidad": "",
+            "precio": "2.50"
+          },
+          "mensaje_visible": "La cantidad es obligatoria.",
+          "tabla_productos": [],
+          "tabla_ventas": [],
+          "base_datos": {
+            "productos": [],
+            "ventas": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "E09-03",
+      "descripcion": "Existencias insuficientes: no se genera una venta",
+      "entrada": "stock 10; solicitar 11",
+      "esperado": [
+        "No hay existencias suficientes para realizar la venta.",
+        {
+          "productos": [
+            {
+              "codigo": "LAP-01",
+              "nombre": "Lápiz HB",
+              "cantidad": 10,
+              "precio_centavos": 250
+            }
+          ],
+          "ventas": []
+        }
+      ],
+      "obtenido": [
+        "No hay existencias suficientes para realizar la venta.",
+        {
+          "productos": [
+            {
+              "codigo": "LAP-01",
+              "nombre": "Lápiz HB",
+              "cantidad": 10,
+              "precio_centavos": 250
+            }
+          ],
+          "ventas": []
+        }
+      ],
+      "estado": "CUMPLE",
+      "duracion_segundos": 0.093,
+      "prueba": "pruebas.test_aceptacion.ExcepcionesUsuario.test_no_disponible",
+      "detalle_error": "",
+      "evidencias": [
+        {
+          "accion": "Registro de producto",
+          "entrada_formulario": {
+            "codigo": "LAP-01",
+            "nombre": "Lápiz HB",
+            "cantidad": "10",
+            "precio": "2.50"
+          },
+          "mensaje_visible": "Producto LAP-01 registrado correctamente.",
+          "tabla_productos": [
+            [
+              "LAP-01",
+              "Lápiz HB",
+              "10",
+              "2.50",
+              "25.00"
+            ]
+          ],
+          "tabla_ventas": [],
+          "base_datos": {
+            "productos": [
+              {
+                "codigo": "LAP-01",
+                "nombre": "Lápiz HB",
+                "cantidad": 10,
+                "precio_centavos": 250
+              }
+            ],
+            "ventas": []
+          }
+        },
+        {
+          "accion": "Registro de venta",
+          "entrada_formulario": {
+            "codigo": "LAP-01",
+            "cantidad": "11",
+            "descuento": "10"
+          },
+          "mensaje_visible": "No hay existencias suficientes para realizar la venta.",
+          "tabla_productos": [
+            [
+              "LAP-01",
+              "Lápiz HB",
+              "10",
+              "2.50",
+              "25.00"
+            ]
+          ],
+          "tabla_ventas": [],
+          "base_datos": {
+            "productos": [
+              {
+                "codigo": "LAP-01",
+                "nombre": "Lápiz HB",
+                "cantidad": 10,
+                "precio_centavos": 250
+              }
+            ],
+            "ventas": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "E09-04",
+      "descripcion": "Producto inexistente: mensaje comprensible",
+      "entrada": "vender XXX-01 sin registrarlo",
+      "esperado": [
+        "No existe un producto con ese código.",
+        {
+          "productos": [],
+          "ventas": []
+        }
+      ],
+      "obtenido": [
+        "No existe un producto con ese código.",
+        {
+          "productos": [],
+          "ventas": []
+        }
+      ],
+      "estado": "CUMPLE",
+      "duracion_segundos": 0.0902,
+      "prueba": "pruebas.test_aceptacion.ExcepcionesUsuario.test_inexistente",
+      "detalle_error": "",
+      "evidencias": [
+        {
+          "accion": "Registro de venta",
+          "entrada_formulario": {
+            "codigo": "XXX-01",
+            "cantidad": "3",
+            "descuento": "10"
+          },
+          "mensaje_visible": "No existe un producto con ese código.",
+          "tabla_productos": [],
+          "tabla_ventas": [],
+          "base_datos": {
+            "productos": [],
+            "ventas": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "E10-01",
+      "descripcion": "CA-01: campos y acciones necesarios están disponibles",
+      "entrada": "abrir formulario de venta",
+      "esperado": [
+        [
+          "codigo",
+          "cantidad",
+          "descuento"
+        ],
+        "Registrar venta"
+      ],
+      "obtenido": [
+        [
+          "codigo",
+          "cantidad",
+          "descuento"
+        ],
+        "Registrar venta"
+      ],
+      "estado": "CUMPLE",
+      "duracion_segundos": 0.0818,
+      "prueba": "pruebas.test_aceptacion.ValidacionFinalSimulada.test_ca01_campos",
+      "detalle_error": "",
+      "evidencias": []
+    },
+    {
+      "id": "E10-02",
+      "descripcion": "CA-02: venta sin cantidad se rechaza y mantiene la información",
+      "entrada": "cantidad vacía",
+      "esperado": [
+        "La cantidad es obligatoria.",
+        {
+          "productos": [
+            {
+              "codigo": "LAP-01",
+              "nombre": "Lápiz HB",
+              "cantidad": 10,
+              "precio_centavos": 250
+            }
+          ],
+          "ventas": []
+        },
+        "LAP-01"
+      ],
+      "obtenido": [
+        "La cantidad es obligatoria.",
+        {
+          "productos": [
+            {
+              "codigo": "LAP-01",
+              "nombre": "Lápiz HB",
+              "cantidad": 10,
+              "precio_centavos": 250
+            }
+          ],
+          "ventas": []
+        },
+        "LAP-01"
+      ],
+      "estado": "CUMPLE",
+      "duracion_segundos": 0.0972,
+      "prueba": "pruebas.test_aceptacion.ValidacionFinalSimulada.test_ca02_obligatorios",
+      "detalle_error": "",
+      "evidencias": [
+        {
+          "accion": "Registro de producto",
+          "entrada_formulario": {
+            "codigo": "LAP-01",
+            "nombre": "Lápiz HB",
+            "cantidad": "10",
+            "precio": "2.50"
+          },
+          "mensaje_visible": "Producto LAP-01 registrado correctamente.",
+          "tabla_productos": [
+            [
+              "LAP-01",
+              "Lápiz HB",
+              "10",
+              "2.50",
+              "25.00"
+            ]
+          ],
+          "tabla_ventas": [],
+          "base_datos": {
+            "productos": [
+              {
+                "codigo": "LAP-01",
+                "nombre": "Lápiz HB",
+                "cantidad": 10,
+                "precio_centavos": 250
+              }
+            ],
+            "ventas": []
+          }
+        },
+        {
+          "accion": "Registro de venta",
+          "entrada_formulario": {
+            "codigo": "LAP-01",
+            "cantidad": "",
+            "descuento": "10"
+          },
+          "mensaje_visible": "La cantidad es obligatoria.",
+          "tabla_productos": [
+            [
+              "LAP-01",
+              "Lápiz HB",
+              "10",
+              "2.50",
+              "25.00"
+            ]
+          ],
+          "tabla_ventas": [],
+          "base_datos": {
+            "productos": [
+              {
+                "codigo": "LAP-01",
+                "nombre": "Lápiz HB",
+                "cantidad": 10,
+                "precio_centavos": 250
+              }
+            ],
+            "ventas": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "E10-03",
+      "descripcion": "CA-03: el descuento máximo se aplica correctamente",
+      "entrada": "venta 2 × 2.50; descuento 20 %",
+      "esperado": [
+        "Venta 1 registrada correctamente. Total: 4.00.",
+        400
+      ],
+      "obtenido": [
+        "Venta 1 registrada correctamente. Total: 4.00.",
+        400
+      ],
+      "estado": "CUMPLE",
+      "duracion_segundos": 0.0978,
+      "prueba": "pruebas.test_aceptacion.ValidacionFinalSimulada.test_ca03_descuento_maximo",
+      "detalle_error": "",
+      "evidencias": [
+        {
+          "accion": "Registro de producto",
+          "entrada_formulario": {
+            "codigo": "LAP-01",
+            "nombre": "Lápiz HB",
+            "cantidad": "10",
+            "precio": "2.50"
+          },
+          "mensaje_visible": "Producto LAP-01 registrado correctamente.",
+          "tabla_productos": [
+            [
+              "LAP-01",
+              "Lápiz HB",
+              "10",
+              "2.50",
+              "25.00"
+            ]
+          ],
+          "tabla_ventas": [],
+          "base_datos": {
+            "productos": [
+              {
+                "codigo": "LAP-01",
+                "nombre": "Lápiz HB",
+                "cantidad": 10,
+                "precio_centavos": 250
+              }
+            ],
+            "ventas": []
+          }
+        },
+        {
+          "accion": "Registro de venta",
+          "entrada_formulario": {
+            "codigo": "LAP-01",
+            "cantidad": "2",
+            "descuento": "20"
+          },
+          "mensaje_visible": "Venta 1 registrada correctamente. Total: 4.00.",
+          "tabla_productos": [
+            [
+              "LAP-01",
+              "Lápiz HB",
+              "8",
+              "2.50",
+              "20.00"
+            ]
+          ],
+          "tabla_ventas": [
+            [
+              "1",
+              "LAP-01",
+              "2",
+              "20",
+              "4.00"
+            ]
+          ],
+          "base_datos": {
+            "productos": [
+              {
+                "codigo": "LAP-01",
+                "nombre": "Lápiz HB",
+                "cantidad": 8,
+                "precio_centavos": 250
+              }
+            ],
+            "ventas": [
+              {
+                "id": 1,
+                "codigo": "LAP-01",
+                "cantidad": 2,
+                "descuento": "20",
+                "total_centavos": 400,
+                "fecha": "2026-11-11T21:24:31.097Z"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "E10-04",
+      "descripcion": "CA-04: descuento excesivo se rechaza sin cambios",
+      "entrada": "descuento 20.01 %",
+      "esperado": [
+        "El descuento no puede superar 20.",
+        {
+          "productos": [
+            {
+              "codigo": "LAP-01",
+              "nombre": "Lápiz HB",
+              "cantidad": 10,
+              "precio_centavos": 250
+            }
+          ],
+          "ventas": []
+        }
+      ],
+      "obtenido": [
+        "El descuento no puede superar 20.",
+        {
+          "productos": [
+            {
+              "codigo": "LAP-01",
+              "nombre": "Lápiz HB",
+              "cantidad": 10,
+              "precio_centavos": 250
+            }
+          ],
+          "ventas": []
+        }
+      ],
+      "estado": "CUMPLE",
+      "duracion_segundos": 0.0917,
+      "prueba": "pruebas.test_aceptacion.ValidacionFinalSimulada.test_ca04_descuento_invalido",
+      "detalle_error": "",
+      "evidencias": [
+        {
+          "accion": "Registro de producto",
+          "entrada_formulario": {
+            "codigo": "LAP-01",
+            "nombre": "Lápiz HB",
+            "cantidad": "10",
+            "precio": "2.50"
+          },
+          "mensaje_visible": "Producto LAP-01 registrado correctamente.",
+          "tabla_productos": [
+            [
+              "LAP-01",
+              "Lápiz HB",
+              "10",
+              "2.50",
+              "25.00"
+            ]
+          ],
+          "tabla_ventas": [],
+          "base_datos": {
+            "productos": [
+              {
+                "codigo": "LAP-01",
+                "nombre": "Lápiz HB",
+                "cantidad": 10,
+                "precio_centavos": 250
+              }
+            ],
+            "ventas": []
+          }
+        },
+        {
+          "accion": "Registro de venta",
+          "entrada_formulario": {
+            "codigo": "LAP-01",
+            "cantidad": "3",
+            "descuento": "20.01"
+          },
+          "mensaje_visible": "El descuento no puede superar 20.",
+          "tabla_productos": [
+            [
+              "LAP-01",
+              "Lápiz HB",
+              "10",
+              "2.50",
+              "25.00"
+            ]
+          ],
+          "tabla_ventas": [],
+          "base_datos": {
+            "productos": [
+              {
+                "codigo": "LAP-01",
+                "nombre": "Lápiz HB",
+                "cantidad": 10,
+                "precio_centavos": 250
+              }
+            ],
+            "ventas": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "E10-05",
+      "descripcion": "CA-05: stock e historial reflejan la venta y pueden consultarse",
+      "entrada": "stock 10; venta de 3; actualizar consultas",
+      "esperado": [
+        "7",
+        "6.75",
+        7,
+        675
+      ],
+      "obtenido": [
+        "7",
+        "6.75",
+        7,
+        675
+      ],
+      "estado": "CUMPLE",
+      "duracion_segundos": 0.0948,
+      "prueba": "pruebas.test_aceptacion.ValidacionFinalSimulada.test_ca05_consistencia",
+      "detalle_error": "",
+      "evidencias": [
+        {
+          "accion": "Registro de producto",
+          "entrada_formulario": {
+            "codigo": "LAP-01",
+            "nombre": "Lápiz HB",
+            "cantidad": "10",
+            "precio": "2.50"
+          },
+          "mensaje_visible": "Producto LAP-01 registrado correctamente.",
+          "tabla_productos": [
+            [
+              "LAP-01",
+              "Lápiz HB",
+              "10",
+              "2.50",
+              "25.00"
+            ]
+          ],
+          "tabla_ventas": [],
+          "base_datos": {
+            "productos": [
+              {
+                "codigo": "LAP-01",
+                "nombre": "Lápiz HB",
+                "cantidad": 10,
+                "precio_centavos": 250
+              }
+            ],
+            "ventas": []
+          }
+        },
+        {
+          "accion": "Registro de venta",
+          "entrada_formulario": {
+            "codigo": "LAP-01",
+            "cantidad": "3",
+            "descuento": "10"
+          },
+          "mensaje_visible": "Venta 1 registrada correctamente. Total: 6.75.",
+          "tabla_productos": [
+            [
+              "LAP-01",
+              "Lápiz HB",
+              "7",
+              "2.50",
+              "17.50"
+            ]
+          ],
+          "tabla_ventas": [
+            [
+              "1",
+              "LAP-01",
+              "3",
+              "10",
+              "6.75"
+            ]
+          ],
+          "base_datos": {
+            "productos": [
+              {
+                "codigo": "LAP-01",
+                "nombre": "Lápiz HB",
+                "cantidad": 7,
+                "precio_centavos": 250
+              }
+            ],
+            "ventas": [
+              {
+                "id": 1,
+                "codigo": "LAP-01",
+                "cantidad": 3,
+                "descuento": "10",
+                "total_centavos": 675,
+                "fecha": "2026-11-11T21:24:31.271Z"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "E10-06",
+      "descripcion": "CA-06: una venta sin existencias se rechaza sin cambios",
+      "entrada": "stock 10; venta de 11",
+      "esperado": [
+        "No hay existencias suficientes para realizar la venta.",
+        {
+          "productos": [
+            {
+              "codigo": "LAP-01",
+              "nombre": "Lápiz HB",
+              "cantidad": 10,
+              "precio_centavos": 250
+            }
+          ],
+          "ventas": []
+        }
+      ],
+      "obtenido": [
+        "No hay existencias suficientes para realizar la venta.",
+        {
+          "productos": [
+            {
+              "codigo": "LAP-01",
+              "nombre": "Lápiz HB",
+              "cantidad": 10,
+              "precio_centavos": 250
+            }
+          ],
+          "ventas": []
+        }
+      ],
+      "estado": "CUMPLE",
+      "duracion_segundos": 0.0966,
+      "prueba": "pruebas.test_aceptacion.ValidacionFinalSimulada.test_ca06_stock",
+      "detalle_error": "",
+      "evidencias": [
+        {
+          "accion": "Registro de producto",
+          "entrada_formulario": {
+            "codigo": "LAP-01",
+            "nombre": "Lápiz HB",
+            "cantidad": "10",
+            "precio": "2.50"
+          },
+          "mensaje_visible": "Producto LAP-01 registrado correctamente.",
+          "tabla_productos": [
+            [
+              "LAP-01",
+              "Lápiz HB",
+              "10",
+              "2.50",
+              "25.00"
+            ]
+          ],
+          "tabla_ventas": [],
+          "base_datos": {
+            "productos": [
+              {
+                "codigo": "LAP-01",
+                "nombre": "Lápiz HB",
+                "cantidad": 10,
+                "precio_centavos": 250
+              }
+            ],
+            "ventas": []
+          }
+        },
+        {
+          "accion": "Registro de venta",
+          "entrada_formulario": {
+            "codigo": "LAP-01",
+            "cantidad": "11",
+            "descuento": "10"
+          },
+          "mensaje_visible": "No hay existencias suficientes para realizar la venta.",
+          "tabla_productos": [
+            [
+              "LAP-01",
+              "Lápiz HB",
+              "10",
+              "2.50",
+              "25.00"
+            ]
+          ],
+          "tabla_ventas": [],
+          "base_datos": {
+            "productos": [
+              {
+                "codigo": "LAP-01",
+                "nombre": "Lápiz HB",
+                "cantidad": 10,
+                "precio_centavos": 250
+              }
+            ],
+            "ventas": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "E10-07",
+      "descripcion": "CA-07: error de base de datos comprensible y recuperación",
+      "entrada": "bloquear SQLite, intentar venta, desbloquear y reintentar",
+      "esperado": [
+        "No se pudo acceder a la base de datos. Intenta de nuevo.",
+        "Venta 1 registrada correctamente. Total: 6.75.",
+        7,
+        1
+      ],
+      "obtenido": [
+        "No se pudo acceder a la base de datos. Intenta de nuevo.",
+        "Venta 1 registrada correctamente. Total: 6.75.",
+        7,
+        1
+      ],
+      "estado": "CUMPLE",
+      "duracion_segundos": 0.7524,
+      "prueba": "pruebas.test_aceptacion.ValidacionFinalSimulada.test_ca07_recuperacion",
+      "detalle_error": "",
+      "evidencias": [
+        {
+          "accion": "Registro de producto",
+          "entrada_formulario": {
+            "codigo": "LAP-01",
+            "nombre": "Lápiz HB",
+            "cantidad": "10",
+            "precio": "2.50"
+          },
+          "mensaje_visible": "Producto LAP-01 registrado correctamente.",
+          "tabla_productos": [
+            [
+              "LAP-01",
+              "Lápiz HB",
+              "10",
+              "2.50",
+              "25.00"
+            ]
+          ],
+          "tabla_ventas": [],
+          "base_datos": {
+            "productos": [
+              {
+                "codigo": "LAP-01",
+                "nombre": "Lápiz HB",
+                "cantidad": 10,
+                "precio_centavos": 250
+              }
+            ],
+            "ventas": []
+          }
+        },
+        {
+          "accion": "Venta rechazada por bloqueo; estado verificado después de liberar SQLite",
+          "entrada_formulario": {
+            "codigo": "LAP-01",
+            "cantidad": "3",
+            "descuento": "10"
+          },
+          "mensaje_visible": "No se pudo acceder a la base de datos. Intenta de nuevo.",
+          "tabla_productos": [
+            [
+              "LAP-01",
+              "Lápiz HB",
+              "10",
+              "2.50",
+              "25.00"
+            ]
+          ],
+          "tabla_ventas": [],
+          "base_datos": {
+            "productos": [
+              {
+                "codigo": "LAP-01",
+                "nombre": "Lápiz HB",
+                "cantidad": 10,
+                "precio_centavos": 250
+              }
+            ],
+            "ventas": []
+          }
+        },
+        {
+          "accion": "Registro de venta",
+          "entrada_formulario": {
+            "codigo": "LAP-01",
+            "cantidad": "3",
+            "descuento": "10"
+          },
+          "mensaje_visible": "Venta 1 registrada correctamente. Total: 6.75.",
+          "tabla_productos": [
+            [
+              "LAP-01",
+              "Lápiz HB",
+              "7",
+              "2.50",
+              "17.50"
+            ]
+          ],
+          "tabla_ventas": [
+            [
+              "1",
+              "LAP-01",
+              "3",
+              "10",
+              "6.75"
+            ]
+          ],
+          "base_datos": {
+            "productos": [
+              {
+                "codigo": "LAP-01",
+                "nombre": "Lápiz HB",
+                "cantidad": 7,
+                "precio_centavos": 250
+              }
+            ],
+            "ventas": [
+              {
+                "id": 1,
+                "codigo": "LAP-01",
+                "cantidad": 3,
+                "descuento": "10",
+                "total_centavos": 675,
+                "fecha": "2026-11-11T21:24:32.124Z"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+SELECT codigo, nombre, cantidad, precio_centavos FROM productos;
+[('LAP-01', 'Lápiz HB', 7, 250)]
+
+SELECT id, codigo, cantidad, descuento, total_centavos FROM ventas;
+[(1, 'LAP-01', 3, '10', 675)]
+
+PRAGMA integrity_check;
+[('ok',)]
+
+PRAGMA foreign_key_check;
+[]
